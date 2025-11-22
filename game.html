@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Stay updated with real-time match scores and leaderboards in our Padel app! View all matches, track player performance, and see who's leading the pack. Join the competition now!">
+        <link rel="icon" href="pics/logo_circular.png" type="image/png">
+        <link rel="apple-touch-icon" href="pics/logo.png">
+        <link rel="stylesheet" href="css/stylesGame.css">
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Padel Score App",
+              "url": "https://padelscore.app",
+              "description": "A free web application to keep track of padel scores easily and efficiently.",
+              "applicationCategory": "GameApplication",
+              "operatingSystem": "All", 
+              "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "USD",
+                "itemOffered": {
+                  "@type": "Service",
+                  "serviceType": "Score Tracking for Padel"
+                }
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Padel Score",
+                "url": "https://padelscore.app",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://padelscore.app/logo.png"  // Replace with the actual logo URL
+                }
+              },
+              "potentialAction": {
+                "@type": "UseAction",
+                "target": "https://padelscore.app",
+                "name": "Track Scores"
+              }
+            }
+            </script>
+        <title>Game</title>
+    </head>
+    <body>
+        <head>
+            <div class="title-container">
+                <a href="https://padelscore.app">
+                    <img src="pics/logo.png" alt="Padelscore Logo" class="logo">
+                </a>
+                <h1 id="maintitle">PadelScore</h1>
+                <h2 style="display: none;">Keep track of the match score</h2>
+            </div>
+        </head>
+        <main>
+            <h3 id="court1">Court 1</h3>
+            <div class="center-wrapper">
+                <fieldset id="game">
+                    <div class="leftSide">
+                        <p id="player1"></p>
+                        <p id="player2"></p>
+                        <input type="number" id="scoreInput1" min="1" max="24" placeholder="Score" oninput="updateScoreCourt1()">
+                    </div>
+
+                     <!-- Divider line -->
+                    <div class="divider"></div>
+
+                    <div class="rightSide">
+                        <p id="player3"></p>
+                        <p id="player4"></p>
+                        <input type="number" id="scoreInput2" min="1" max="24" placeholder="Score" oninput="updateScoreCourt1()">
+                    </div>
+                </fieldset>
+            </div>
+            <h3 id="court2" style="display: none;">Court 2</h3>
+            <div class="center-wrapper">
+                <fieldset id="game2" style="display: none;">
+                    <div class="leftSide">
+                        <p id="player5"></p>
+                        <p id="player6"></p>
+                        <input type="number" id="scoreInput3" min="1" max="24" placeholder="Score" oninput="updateScoreCourt2()">
+                    </div>
+
+                     <!-- Divider line -->
+                     <div class="divider"></div>                    
+
+                    <div class="rightSide">
+                        <p id="player7"></p>
+                        <p id="player8"></p>
+                        <input type="number" id="scoreInput4" min="1" max="24" placeholder="Score" oninput="updateScoreCourt2()">
+                    </div>  
+                     <!-- <button onclick="updateScoreCourt2()">Submit</button> -->
+                </fieldset> 
+            </div>
+            <div id="errorMessage" style="color: red; display: none;"></div>
+            <p id="sittingOut"></p>
+            <div class="button-container">
+                <button id="infoButton" onclick="infoFieldset()">Info</button> 
+                <button id="leaderboardButton" onclick="hideShowLeaderboard()"disabled>Leaderboard</button> 
+                <button id="nextMatchButton" onclick="nextMatch()" disabled>Next match</button> 
+            </div>
+            <fieldset id="infoFieldset" style="display: none;">
+                <div id="info"></div>
+            </fieldset>
+            <fieldset id="leaderboardFieldset" style="display: none;">
+                <div class="table-container">
+                    <table id="leaderboard">
+                        <tbody id="leaderboardBody">
+                            <!--The leaderboard will be stored here-->
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+        </main>
+            <div id="container">
+                <div class="bottom-container">
+                    <p>&copy; 2024 PadelScore.app. <br> All rights reserved.</p>
+                </div>
+            </div>
+        <script src="js/gamescript.js"></script>
+        <script src="js/leaderboard.js"></script>
+    </body>
+</html>

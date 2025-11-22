@@ -1,0 +1,333 @@
+/* Apply Arial font to all text */
+/* Apply Arial font to all text */
+body {
+    font-family: 'Aptos', sans-serif;
+    background-color: rgb(47, 121, 191);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 40px; /* Adjust this value to the height of your bottom container */
+}
+/*Trebuchet MS', sans-serif;*/
+/* Reset default margin for body and main */
+body, main {
+    margin: 0;              /* Remove default margins */
+    padding: 0;             /* Remove default padding */
+}
+
+main {
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+    flex: 1;
+}
+
+/* bottom-conatainer */
+.bottom-container {
+    background: linear-gradient(to top, rgb(47, 121, 191) 98%, white 100%); /* Solid blue with fade at the edge */
+    color: white;
+    text-align: center;
+    padding: 0.5px;
+    width: 100%;
+    font-size: 12px; /* Smaller font size */
+    position: relative;
+    bottom: 0; /* Fix to the bottom of the page */
+    left: 0; /* Start from the left edge */
+}
+
+.title-container {
+    display: flex;
+    background: linear-gradient(to bottom, rgb(47, 121, 191) 98%, white 100%); /* Solid blue with fade at the edge */
+    text-align: center;            /* Center text inside the container */
+    padding: 1px;                 /* Add some padding around the title */
+    width: 100%;                   /* Set width to 100% to span the entire width */
+    margin: 0 auto;                /* Center the container */
+    box-sizing: border-box;        /* Ensures padding is included in width calculation */
+}
+
+.logo {
+    width: 60px;                   /* Adjust size of the logo */
+    height: auto;                  /* Keeps the logo aspect ratio */
+    margin-right: 10px;            /* Adds space between logo and title */
+}
+
+/* Style for the main title */
+#maintitle {
+    margin: 0;                  /* Remove default margin */
+    font-size: 32px;          /* Set a larger font size for the title */
+    color: white; 
+    padding: 10px 0px 0px 0px;
+}
+
+#court1, #court2 {
+    text-align: center;
+    width: 100%; /* Ensures it takes the full width of its container */
+    font-size: 20px; /* Optional: Adjusts the font size for better visibility */
+    padding: 2px 0px 0px 0px;
+}
+
+/* Centered fieldset */
+#game {
+    display: flex;
+    justify-content: space-between;
+    /*background-color: #eb4d2a; */
+    background-color: rgb(165, 205, 243); 
+    align-items: center;
+    position: relative; /* Make sure the divider stays within this fieldset */
+    width: 40%; /* Adjust width as desired */
+    padding: 40px;
+    border: 2px solid black; /* Border style */
+    border-radius: 4px;        /* Optional: adds rounded corners */
+    margin: 1px 0;
+    gap: 75px; /* Space between left and right sides */
+}
+
+#game2 {
+    display: flex;
+    justify-content: space-between;
+    /*background-color: #eb4d2a; */
+    background-color: rgb(165, 205, 243); 
+    align-items: center;
+    position: relative; /* Make sure the divider stays within this fieldset */
+    width: 40%; /* Adjust width as desired */
+    padding: 40px;
+    border: 2px solid black; /* Border style */
+    border-radius: 4px;        /* Optional: adds rounded corners */
+    margin: 1px 0;
+    gap: 75px; /* Space between left and right sides */
+}
+
+.leftSide, .rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+#player1, #player2, #player3, #player4, #player5, #player6, #player7, #player8  {
+    font-weight: bold;
+}
+
+/* Divider line */
+.divider {
+    width: 4.2px; /* Width of the line */
+    background-color: black; /* Color of the line */
+    height: 100%; /* Adjust the height to be within the game fieldset */
+    position: absolute;
+    top: 50%; /* Align to the center vertically */
+    left: 50%; /* Positioned at the middle of the fieldset */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+}
+
+/* Center placeholder text in input fields */
+#scoreInput1, #scoreInput2, #scoreInput3, #scoreInput4 {
+    width: 70px; /* You can adjust the width as needed */
+    text-align: center; /* Center the placeholder and entered text */
+    padding: 2px; /* Optional: Adds padding inside the input for better spacing */
+    font-size: 16px; /* To be above 15px so iPhone does not zoom */
+}
+
+#sittingOut {
+    text-align: center;
+    width: 100%; /* Ensures it takes the full width of its container */
+}
+
+/* Centering wrapper */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Full page width */
+    align-items: center;
+    margin: 0 auto; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically (optional) */
+    gap: 10px; /* Space between buttons */
+    margin: 20px auto; /* Center the container itself if needed */
+
+}
+
+#infoFieldset {
+    display: flex;            /* Enables flexbox layout */
+    justify-content: center;   /* Centers content horizontally */
+    width: 100%;               /* Full width of the page */
+    border: none;
+    padding: 0;
+    margin: 0;
+    padding: 0px 0px 20px 0px;
+}
+
+/* Wrapper for responsive table */
+.table-container {
+    width: 100%; /* Full width */
+    overflow-x: auto; /* Horizontal scroll if content overflows */
+    display: flex;
+    justify-content: center;
+}
+
+/* Center the fieldset containing the leaderboard */
+#leaderboardFieldset {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    overflow-x: auto; /* Allows scrolling if content overflows */
+    border: none;
+}
+
+/* Style and center the leaderboard table */
+#leaderboard {
+    border-collapse: collapse;
+    max-width: 90%; /* Set max width to 90% to allow some margin */
+    width: 50%; /* Allow table to use the full width of its container */
+    text-align: center;
+    margin: 0 auto; /* Center the table */
+    overflow-x: auto; /* Add horizontal scrolling if needed on very small screens */
+}
+
+/* Optional: Add borders and padding to the table for better readability */
+#leaderboard th, #leaderboard td {
+    padding: 8px; /* Adds space inside the cells */
+    border: 1px solid #ddd; /* Adds borders around cells */
+}
+
+/* Optional: Style the table header */
+#leaderboard th {
+    background-color: rgb(162, 158, 158); /* Header background color #4f88d3 */
+    color: white; /* Header text color */
+}
+
+#errorMessage {
+    display: flex;
+    justify-content: center; /* Centers the fieldset's content horizontally */
+    width: 100%; /* Full page width */
+    margin: 0 auto; /* Centers the fieldset itself */
+    padding: 20px 0px 0px 0px;
+}
+
+#infoButton {
+    font-size: 14px;          /* Increases font size */
+    margin-top: 1px; /* Optional: Add margin to separate fieldsets */
+    padding: 6px 12px;        /* Adds padding for a larger button */
+    background-color: rgb(222, 215, 215); /* Sets background color to turquoise */
+    color: black;              /* Sets text color to white for contrast */
+    border: solid;              /* Removes default button border */
+    border-radius: 5px;        /* Optional: adds rounded corners */
+    cursor: pointer;           /* Shows pointer on hover */
+}
+
+#infoButton:hover {
+    background-color: rgb(200, 196, 196); /* Darker turquoise for hover effect */
+}
+
+#nextMatchButton {
+    font-size: 14px;          /* Increases font size */
+    margin-top: 1px; /* Optional: Add margin to separate fieldsets */
+    padding: 7px 14px;        /* Adds padding for a larger button */
+    background-color: rgb(47, 121, 191); /* Sets background color to turquoise */
+    color: white;              /* Sets text color to white for contrast */
+    border: solid 1px black;              /* Removes default button border */
+    border-radius: 5px;        /* Optional: adds rounded corners */
+    cursor: pointer;           /* Shows pointer on hover */
+}
+
+#nextMatchButton:hover {
+    background-color: rgb(34, 87, 200); /* Darker turquoise for hover effect */
+}
+
+/* Disabled state styling */
+#nextMatchButton:disabled {
+    background-color: rgb(150, 150, 150); /* Greyed-out background color */
+    color: rgb(200, 200, 200);            /* Light grey text color */
+    cursor: not-allowed;                  /* Shows "not allowed" cursor */
+    opacity: 0.6;                         /* Adds transparency */
+    border: none;
+}
+
+#leaderboardButton {
+    font-size: 14px;          /* Increases font size */
+    margin-top: 1px; /* Optional: Add margin to separate fieldsets */
+    padding: 6px 12px;        /* Adds padding for a larger button */
+    background-color: rgb(222, 215, 215); /* Sets background color to turquoise */
+    color: black;              /* Sets text color to white for contrast */
+    border: solid;              /* Removes default button border */
+    border-radius: 5px;        /* Optional: adds rounded corners */
+    cursor: pointer;           /* Shows pointer on hover */
+}
+
+#leaderboardButton:hover {
+    background-color: rgb(200, 196, 196); /* Darker turquoise for hover effect */
+}
+
+/* Disabled state styling */
+#leaderboardButton:disabled {
+    background-color: rgb(150, 150, 150); /* Greyed-out background color */
+    color: rgb(200, 200, 200);            /* Light grey text color */
+    cursor: not-allowed;                /* Shows "not allowed" cursor */
+    opacity: 0.6;                         /* Adds transparency */
+}
+
+.leaderboard-grid {
+    left: 50%;
+    width: 400px;
+    margin-left: -210px;
+    height: auto;
+    position: absolute;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 30% 10% 10% 10% 20% 20%;
+    grid-template-rows: 30px;
+    grid-row-gap: 0; 
+    border: thin solid lightgrey;
+    border-radius: 3px;
+    box-shadow: 2px 3px 3px #888888;
+    /*animation: animatezoom 0.5s; */
+    background-color: whitesmoke;
+    color: black;
+    z-index: 4;
+}
+ 
+.leaderboard-grid > div {
+    align-items: center;
+    display: flex;
+    border: thin solid black;
+}
+
+.leaderboard-header {
+    background-color: rgb(162, 158, 158);
+    color: white; /* black is default */
+    font-weight: bold;
+    font-size: 1em; /* 1em tilsvarer 16px, men tilpasser skjerm */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+.leaderboard-players {
+    font-weight: bold;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+.leaderboard-info {
+    font-size: 0.9em;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+@-webkit-keyframes animatezoom
+{
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+ 
+@keyframes animatezoom
+{
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}

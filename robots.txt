@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/      # Prevents all crawlers from accessing the /private/ directory
+Disallow: /temp/         # Prevents all crawlers from accessing the /temp/ directory
+
+Sitemap: https://padelscore.app/sitemap.xml  # Location of your sitemap

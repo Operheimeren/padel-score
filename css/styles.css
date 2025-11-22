@@ -1,0 +1,137 @@
+/* Apply Arial font to all text */
+body {
+    font-family: 'Aptos', sans-serif;
+    background-color: rgb(47, 121, 191);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 40px; /* Adjust this value to the height of your bottom container */
+}
+/*Trebuchet MS', sans-serif;*/
+/* Reset default margin for body and main */
+body, main {
+    margin: 0;              /* Remove default margins */
+    padding: 0;             /* Remove default padding */
+}
+
+main {
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+    flex: 1;
+}
+
+/* bottom-conatainer */
+.bottom-container {
+    background: linear-gradient(to top, rgb(47, 121, 191) 98%, white 100%); /* Solid blue with fade at the edge */
+    color: white;
+    text-align: center;
+    padding: 0.5px;
+    width: 100%;
+    font-size: 12px; /* Smaller font size */
+    position: relative;
+    bottom: 0; /* Fix to the bottom of the page */
+    left: 0; /* Start from the left edge */
+}
+
+/* Style for the container */
+.title-container {
+    display: flex;
+    background: linear-gradient(to bottom, rgb(47, 121, 191) 98%, white 100%); /* Solid blue with fade at the edge */
+    text-align: center;            /* Center text inside the container */
+    padding: 1px;                 /* Add some padding around the title */
+    width: 100%;                   /* Set width to 100% to span the entire width */
+    left: 50%;              /* Center the container margin: 0 auto;  */
+    box-sizing: border-box;        /* Ensures padding is included in width calculation */
+}
+
+.logo {
+    width: 60px;                   /* Adjust size of the logo */
+    height: auto;                  /* Keeps the logo aspect ratio */
+    margin-right: 10px;            /* Adds space between logo and title */
+}
+
+/* Style for the main title */
+#maintitle {
+    margin: 0;                  /* Remove default margin */
+    font-size: 32px;          /* Set a larger font size for the title */
+    color: white; 
+    padding: 10px 0px 0px 0px;
+}
+
+.no-underline {
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit;        /* Ensures the link color matches the surrounding text */
+}
+
+#playerList {
+    list-style: none; /* Removes bullets */
+    padding: 0;
+    margin: 10px auto; /* Centers the list */
+    text-align: center; /* Centers text inside list items */
+    width: fit-content; /* Shrinks to fit content, can also use a fixed width */
+}
+
+/* All fieldsets */
+fieldset {
+    padding: 10px; /* Adjust the padding size as needed */
+    margin-top: 20px; /* Optional: Add margin to separate fieldsets */
+    text-align: center;
+    border: none;
+}
+
+/* Style for the legend */
+fieldset legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block; /* Keeps it positioned within the centered layout */
+}
+
+#newPlayer {
+    text-transform: capitalize;
+    font-size: 16px;
+    width: 150px;
+}
+
+#addButton {
+    font-size: 14px;          /* Increases font size */
+    margin-top: 1px; /* Optional: Add margin to separate fieldsets */
+    padding: 6px 12px;        /* Adds padding for a larger button */
+    background-color: rgb(222, 215, 215);; /* Sets background color to turquoise */
+    color: black;              /* Sets text color to white for contrast */
+    border: solid;              /* Removes default button border */
+    border-radius: 5px;        /* Optional: adds rounded corners */
+    cursor: pointer;           /* Shows pointer on hover */
+}
+
+#addButton:hover {
+    background-color: rgb(200, 196, 196); /* Darker turquoise for hover effect */
+}
+
+#startButton {
+    display: block;            /* Centers the button in its container */
+    margin: 0 auto;            /* Auto margins horizontally center it */
+    font-size: 1.12em;          /* Increases font size */
+    margin-top: 10px; /* Optional: Add margin to separate fieldsets */
+    padding: 11px 22px;        /* Adds padding for a larger button */
+    background-color: rgb(47, 121, 191); /* Sets background color to turquoise */
+    color: white;              /* Sets text color to white for contrast */
+    border: solid 1px black;              /* Removes default button border */
+    border-radius: 5px;        /* Optional: adds rounded corners */
+    cursor: pointer;           /* Shows pointer on hover */
+}
+
+
+#startButton:hover {
+    background-color: rgb(34, 87, 200); /* Darker turquoise for hover effect */
+}
+
+#errorMessage {
+    padding: 10px; /* Adjust the padding size as needed */
+    margin-bottom: 5px; /* Optional: Add margin to separate fieldsets */
+    text-align: center;
+    border: none;
+}
+
+
+
