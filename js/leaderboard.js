@@ -5,7 +5,7 @@ function showLeaderboard (gameObject) {
     // Oppretter ny class
     div.setAttribute('class', 'leaderboard-grid');
 
-    div.style()
+    //div.style()
 
     // Legger div under main class
     document.querySelector('.table-container').appendChild(div);

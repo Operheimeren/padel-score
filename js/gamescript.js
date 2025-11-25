@@ -1741,12 +1741,13 @@ function updateLeaderboard() {
     //console.log('Her er oppdatert object etter score: ', sortedGameObject);
 
     // ________updating the leaderboard___________  
-    let tableBody = document.getElementById("leaderboardBody");
+    //let tableBody = document.getElementById("leaderboardBody");
 
 
     // Sets the heading
-    tableBody.innerHTML = "<tr><th>Player</th><th>G</th><th>W</th><th>L</th><th>Avg.</th><th>Score</th></tr>";
+    //tableBody.innerHTML = "<tr><th>Player</th><th>G</th><th>W</th><th>L</th><th>Avg.</th><th>Score</th></tr>";
 
+    /*
     // Iterate over the object and populate the table
     for (let player in sortedGameObject) {
         if (sortedGameObject.hasOwnProperty(player)) {
@@ -1754,7 +1755,7 @@ function updateLeaderboard() {
             let row = `<tr><td><strong>${player}</strong></td><td>${playerData.games}</td><td>${playerData.win}</td><td>${playerData.lost}</td><td>${playerData.average}</td><td>${playerData.score}</td></tr>`;
             tableBody.innerHTML += row;
         }
-    }
+    }*/
 
     showLeaderboard(sortedGameObject);
 
